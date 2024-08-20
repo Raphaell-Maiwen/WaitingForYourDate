@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://cljovl026nqgb"]
+
+[ext_resource type="PackedScene" path="res://instructions.tscn" id="1_i2k35"]
+[ext_resource type="PackedScene" path="res://input_processing.tscn" id="2_rjr5o"]
+[ext_resource type="Texture2D" uid="uid://dri8yqlrvlfi8" path="res://washington-the-pink-door-most-romantic-restaurants-by-state-FT-SS0118-2942f976a0fa41f680bd25ef84ce43f9.jpg" id="3_mc818"]
+[ext_resource type="Texture2D" uid="uid://bkx05c8ieha2a" path="res://Edward_Cullen.png" id="4_ylv7h"]
+[ext_resource type="AudioStream" uid="uid://fl5gq8u04ejf" path="res://Lobo Loco - Chief Inspector Baldwin (ID 873).mp3" id="5_n3rp7"]
+
+[node name="Main_Game" type="Node"]
+
+[node name="Insctructions" parent="." instance=ExtResource("1_i2k35")]
+z_index = 999
+offset_left = 39.0
+offset_top = 504.0
+offset_right = 440.0
+offset_bottom = 556.0
+
+[node name="InputProcessing" parent="." node_paths=PackedStringArray("score_label", "instructions_label", "date_picture") instance=ExtResource("2_rjr5o")]
+score_label = NodePath("../Score")
+instructions_label = NodePath("../Insctructions")
+date_picture = NodePath("../EdwardCullen")
+
+[node name="Score" type="Label" parent="."]
+z_index = 999
+offset_left = 37.0
+offset_top = 627.0
+offset_right = 85.0
+offset_bottom = 653.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(280, 357.125)
+scale = Vector2(0.632, 0.639778)
+texture = ExtResource("3_mc818")
+
+[node name="EdwardCullen" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(295, 471.234)
+scale = Vector2(1.35036, 1.35036)
+texture = ExtResource("4_ylv7h")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_n3rp7")
+autoplay = true

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://tqyvlh8va54s"]
+
+[node name="Label" type="Label"]
+offset_left = 42.0
+offset_top = 184.0
+offset_right = 443.0
+offset_bottom = 236.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+text = "Hold space to wait for you date
+As soon as you release it, you're ditching the place"

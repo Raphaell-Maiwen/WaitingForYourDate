@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cm6ogem6hm8eg"]
+
+[ext_resource type="Script" path="res://InputProcessing.gd" id="1_flpy6"]
+
+[node name="InputProcessing" type="Node"]
+script = ExtResource("1_flpy6")
